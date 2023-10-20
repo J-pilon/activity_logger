@@ -14,6 +14,9 @@
 		8AFA72602AE3096C007AB17B /* ActivityLoggerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA725F2AE3096C007AB17B /* ActivityLoggerTests.swift */; };
 		8AFA726A2AE3096C007AB17B /* ActivityLoggerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA72692AE3096C007AB17B /* ActivityLoggerUITests.swift */; };
 		8AFA726C2AE3096C007AB17B /* ActivityLoggerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA726B2AE3096C007AB17B /* ActivityLoggerUITestsLaunchTests.swift */; };
+		8AFA727D2AE31B23007AB17B /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA727C2AE31B23007AB17B /* Activity.swift */; };
+		8AFA727F2AE31C7C007AB17B /* StartActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA727E2AE31C7C007AB17B /* StartActivityView.swift */; };
+		8AFA72822AE321C0007AB17B /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA72812AE321C0007AB17B /* ActivityModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		8AFA72652AE3096C007AB17B /* ActivityLoggerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActivityLoggerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFA72692AE3096C007AB17B /* ActivityLoggerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLoggerUITests.swift; sourceTree = "<group>"; };
 		8AFA726B2AE3096C007AB17B /* ActivityLoggerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLoggerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8AFA727C2AE31B23007AB17B /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		8AFA727E2AE31C7C007AB17B /* StartActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartActivityView.swift; sourceTree = "<group>"; };
+		8AFA72812AE321C0007AB17B /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +100,10 @@
 		8AFA724D2AE3096A007AB17B /* ActivityLogger */ = {
 			isa = PBXGroup;
 			children = (
-				8AFA724E2AE3096A007AB17B /* ActivityLoggerApp.swift */,
+				8AFA72802AE3215D007AB17B /* ViewModels */,
+				8AFA727A2AE312FF007AB17B /* Models */,
+				8AFA72792AE312F3007AB17B /* Views */,
+				8AFA72782AE312E1007AB17B /* App */,
 				8AFA72502AE3096A007AB17B /* ContentView.swift */,
 				8AFA72522AE3096C007AB17B /* Assets.xcassets */,
 				8AFA72542AE3096C007AB17B /* Preview Content */,
@@ -125,6 +134,38 @@
 				8AFA726B2AE3096C007AB17B /* ActivityLoggerUITestsLaunchTests.swift */,
 			);
 			path = ActivityLoggerUITests;
+			sourceTree = "<group>";
+		};
+		8AFA72782AE312E1007AB17B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA724E2AE3096A007AB17B /* ActivityLoggerApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		8AFA72792AE312F3007AB17B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA727E2AE31C7C007AB17B /* StartActivityView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8AFA727A2AE312FF007AB17B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA727C2AE31B23007AB17B /* Activity.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8AFA72802AE3215D007AB17B /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8AFA72812AE321C0007AB17B /* ActivityModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AFA72822AE321C0007AB17B /* ActivityModel.swift in Sources */,
+				8AFA727F2AE31C7C007AB17B /* StartActivityView.swift in Sources */,
+				8AFA727D2AE31B23007AB17B /* Activity.swift in Sources */,
 				8AFA72512AE3096A007AB17B /* ContentView.swift in Sources */,
 				8AFA724F2AE3096A007AB17B /* ActivityLoggerApp.swift in Sources */,
 			);
