@@ -9,6 +9,7 @@ import SwiftUI
 
 struct StartActivityView: View {
   @State var name: String = ""
+  var activity = ActivityModel()
 
     var body: some View {
       VStack {
@@ -18,7 +19,9 @@ struct StartActivityView: View {
 
         TextField("Activity", text: $name)
 
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+        Button(action: {
+          print(name)
+        }, label: {
           Text("Start")
         })
       }

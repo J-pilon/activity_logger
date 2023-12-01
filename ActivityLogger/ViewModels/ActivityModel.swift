@@ -10,9 +10,16 @@ import Foundation
 class ActivityModel {
 //  var activities: [Activity] = []
 //
-//  init(activities: [Activity]) {
-//    activities = activities
-//  }
+  init() {
+    self.startDate = Date()
+    self.endDate = nil
+    self.name = ""
+  }
+
+  var startDate: Date
+  var endDate: Date?
+  var name: String
+
 
 //  start a activity
 //  save the start time and date
