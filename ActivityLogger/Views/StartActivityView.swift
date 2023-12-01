@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct StartActivityView: View {
   @State var name: String = ""
-  var activity = ActivityModel()
+
+  @Environment(\.modelContext) var modelContext
+
+  @State var activity = Activity()
 
     var body: some View {
       VStack {
@@ -17,9 +21,11 @@ struct StartActivityView: View {
           .bold()
           .font(.title3)
 
-        TextField("Activity", text: $name)
+        TextField("Activity", text: $activity.name )
 
         Button(action: {
+       //   activity.name = $name
+          modelContext.insert(activity)
           print(name)
         }, label: {
           Text("Start")
