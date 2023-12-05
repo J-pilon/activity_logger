@@ -6,10 +6,24 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ActivityListView: View {
+
+  @Query var activities: [Activity]
+
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+      ForEach(activities) { activity in
+          NavigationLink(value: activity) {
+              VStack(alignment: .leading) {
+                  Text(activity.name)
+                      .font(.headline)
+
+                Text(activity.endDate?.formatted(date: .long, time: .shortened) ?? "No end date")
+              }
+          }
+      }
     }
 }
 

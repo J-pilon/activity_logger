@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+
+  @Environment(\.modelContext) var modelContext
+
   var body: some View {
     NavigationStack {
       VStack {
         NavigationLink(destination: StartActivityView()) {
           Text("Start an Activity")
+        }
+        .padding()        
+        NavigationLink(destination: ActivityListView()) {
+          Text("Activity Listing")
         }
         .padding()
       }
@@ -21,5 +28,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+  ContentView()
 }

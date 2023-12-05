@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154E9A852B1FCE03003A727C /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E9A842B1FCE03003A727C /* ActivityListView.swift */; };
 		8AFA724F2AE3096A007AB17B /* ActivityLoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA724E2AE3096A007AB17B /* ActivityLoggerApp.swift */; };
 		8AFA72512AE3096A007AB17B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA72502AE3096A007AB17B /* ContentView.swift */; };
 		8AFA72532AE3096C007AB17B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AFA72522AE3096C007AB17B /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		154E9A842B1FCE03003A727C /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
 		8AFA724B2AE3096A007AB17B /* ActivityLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFA724E2AE3096A007AB17B /* ActivityLoggerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLoggerApp.swift; sourceTree = "<group>"; };
 		8AFA72502AE3096A007AB17B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				8AFA727E2AE31C7C007AB17B /* StartActivityView.swift */,
+				154E9A842B1FCE03003A727C /* ActivityListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AFA727F2AE31C7C007AB17B /* StartActivityView.swift in Sources */,
+				154E9A852B1FCE03003A727C /* ActivityListView.swift in Sources */,
 				8AFA727D2AE31B23007AB17B /* Activity.swift in Sources */,
 				8AFA72512AE3096A007AB17B /* ContentView.swift in Sources */,
 				8AFA724F2AE3096A007AB17B /* ActivityLoggerApp.swift in Sources */,
