@@ -8,7 +8,8 @@
 import Foundation
 import SwiftData
 
-@Model class Activity {
+@Model
+class Activity {
   //  var activities: [Activity] = []
   //
 

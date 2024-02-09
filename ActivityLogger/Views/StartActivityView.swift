@@ -12,23 +12,20 @@ import SwiftData
 //  activity.endDate == nil
 //}, sort: \Activity.name) var runningActivity: [Activity]
 
-@Query(filter: #Predicate<Activity> { activity in
-  if activity.endDate == nil {
-      return true
-  } else {
-      return false
-  }
-}) var runningActivity: Activity?
+@Query(filter: #Predicate<Activity> { $0.endDate == nil }) 
+var runningActivity: [Activity]
 
 struct StartActivityView: View {
+  @Environment(\.dismiss) private var dismiss
   @State var activity = Activity()
+  @State var isVisible: Bool = false
 
   @Environment(\.modelContext) var modelContext
 
     var body: some View {
       VStack {
-        if (runningActivity != nil) {
-          Text("35 Minutes")
+        if (!runningActivity.isEmpty) {
+            Text("35 Minutes")
         } else {
           Text("What activity are you starting?")
             .bold()
@@ -38,15 +35,29 @@ struct StartActivityView: View {
             .padding(.leading, 30)
 
           Button(action: {
-           // activity.name = name
-            print("Activity Name: \(activity.name)")
-            modelContext.insert(activity)
+            beginActivity(activityName: activity.name)
+            let stopwatch = StopwatchViewModel()
+            isVisible = true
           }, label: {
-            Text("Start")
+            Text("Begin")
           })
         }
       }
+      .sheet(isPresented: $isVisible, content: {
+        StopwatchView()
+      })
     }
+
+  private func beginActivity(activityName: String) {
+      let newActivity = Activity()
+      newActivity.name = activityName
+
+      do {
+        modelContext.insert(newActivity)
+      } catch {
+          print("Error saving context: \(error)")
+      }
+  }
 }
 
 #Preview {
@@ -54,7 +65,6 @@ struct StartActivityView: View {
       let config = ModelConfiguration(isStoredInMemoryOnly: true)
       let container = try ModelContainer(for: Activity.self, configurations: config)
 
-      let example = Activity()
       return StartActivityView()
           .modelContainer(container)
   } catch {

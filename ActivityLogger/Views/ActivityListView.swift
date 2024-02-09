@@ -12,11 +12,11 @@ struct ActivityListView: View {
 
   @Query var activities: [Activity]
 
-
     var body: some View {
+
       ForEach(activities) { activity in
           NavigationLink(value: activity) {
-              VStack(alignment: .leading) {
+              HStack {
                   Text(activity.name)
                       .font(.headline)
 
@@ -28,5 +28,18 @@ struct ActivityListView: View {
 }
 
 #Preview {
-    ActivityListView()
+  do {
+      let config = ModelConfiguration(isStoredInMemoryOnly: true)
+      let container = try! ModelContainer(for: Activity.self, configurations: config)
+
+    for i in 1..<10 {
+      let activity = Activity(endDate: Date(timeIntervalSinceNow: TimeInterval(60 * 60 * i)), name: "Example Activity \(i)")
+            container.mainContext.insert(activity)
+        }
+
+      return ActivityListView()
+          .modelContainer(container)
+  } catch {
+      fatalError("Failed to create model container.")
+  }
 }

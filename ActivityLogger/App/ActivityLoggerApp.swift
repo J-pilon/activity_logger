@@ -13,7 +13,7 @@ struct ActivityLoggerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-            .modelContainer(for: Activity.self)
         }
+        .modelContainer(for: [Activity.self])
     }
 }
