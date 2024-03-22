@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		154E9A852B1FCE03003A727C /* ActivityListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154E9A842B1FCE03003A727C /* ActivityListView.swift */; };
+		8A4719C52BADF7580036F12E /* ActivityDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A4719C42BADF7580036F12E /* ActivityDetailView.swift */; };
 		8AE4C55F2B76CDD1003B9872 /* StopwatchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE4C55E2B76CDD1003B9872 /* StopwatchView.swift */; };
 		8AE4C5612B76CE47003B9872 /* StopwatchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE4C5602B76CE47003B9872 /* StopwatchViewModel.swift */; };
 		8AFA724F2AE3096A007AB17B /* ActivityLoggerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFA724E2AE3096A007AB17B /* ActivityLoggerApp.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		154E9A842B1FCE03003A727C /* ActivityListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityListView.swift; sourceTree = "<group>"; };
+		8A4719C42BADF7580036F12E /* ActivityDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDetailView.swift; sourceTree = "<group>"; };
 		8AE4C55E2B76CDD1003B9872 /* StopwatchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopwatchView.swift; sourceTree = "<group>"; };
 		8AE4C5602B76CE47003B9872 /* StopwatchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StopwatchViewModel.swift; path = ActivityLogger/Views/StopwatchViewModel.swift; sourceTree = SOURCE_ROOT; };
 		8AFA724B2AE3096A007AB17B /* ActivityLogger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityLogger.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +156,7 @@
 				8AFA727E2AE31C7C007AB17B /* StartActivityView.swift */,
 				154E9A842B1FCE03003A727C /* ActivityListView.swift */,
 				8AE4C55E2B76CDD1003B9872 /* StopwatchView.swift */,
+				8A4719C42BADF7580036F12E /* ActivityDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				8AFA727D2AE31B23007AB17B /* Activity.swift in Sources */,
 				8AFA72512AE3096A007AB17B /* ContentView.swift in Sources */,
 				8AFA724F2AE3096A007AB17B /* ActivityLoggerApp.swift in Sources */,
+				8A4719C52BADF7580036F12E /* ActivityDetailView.swift in Sources */,
 				8AE4C5612B76CE47003B9872 /* StopwatchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

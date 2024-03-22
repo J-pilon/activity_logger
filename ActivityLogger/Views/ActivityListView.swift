@@ -15,7 +15,8 @@ struct ActivityListView: View {
     var body: some View {
 
       ForEach(activities) { activity in
-          NavigationLink(value: activity) {
+        NavigationLink(destination: ActivityDetailView(activity: activity)) {
+
               HStack {
                   Text(activity.name)
                       .font(.headline)
